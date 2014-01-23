@@ -1,2 +1,11 @@
 ﻿body {
 }
+p{
+    margin: 0;
+    padding: 0;
+}
+.textbox{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
