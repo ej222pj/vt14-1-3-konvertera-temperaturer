@@ -13,5 +13,13 @@ namespace Konvertera_temp
         {
 
         }
+
+        protected void Convert_Click(object sender, EventArgs e)
+        {
+            if (IsValid) 
+            {
+            
+            }
+        }
     }
 }

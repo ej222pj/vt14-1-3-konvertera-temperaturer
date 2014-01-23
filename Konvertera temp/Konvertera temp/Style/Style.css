@@ -1,11 +1,24 @@
 ﻿body {
 }
-p{
+.labelStyle{
     margin: 0;
     padding: 0;
+    float: left;
+    clear: both;
 }
 .textbox{
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
+    float: left;
+    clear: both;
+}
+.radio{
+    float: left;
+    clear: both;
+}
+.button{
+    margin-top: 20px;
+    float: left;
+    clear: both;
 }

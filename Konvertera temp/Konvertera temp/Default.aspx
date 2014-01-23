@@ -10,19 +10,21 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <p>Starttemperatur:</p>
-        <asp:TextBox ID="TextBox1" runat="server" CssClass="textbox"></asp:TextBox>
+        
+        <asp:Label ID="Label1" runat="server" Text="Starttemperatur:" CssClass="labelStyle"></asp:Label>
+        <asp:TextBox ID="StartTemp" runat="server" CssClass="textbox"></asp:TextBox>
 
-        <p>Sluttemperatur:</p>
-        <asp:TextBox ID="TextBox2" runat="server" CssClass="textbox"></asp:TextBox>
+        <asp:Label ID="Label2" runat="server" Text="Sluttemperatur:" CssClass="labelStyle"></asp:Label>
+        <asp:TextBox ID="EndTemp" runat="server" CssClass="textbox"></asp:TextBox>
 
-        <p>Temperatursteg:</p>
-        <asp:TextBox ID="TextBox3" runat="server" CssClass="textbox"></asp:TextBox>
+        <asp:Label ID="Label3" runat="server" Text="Temperatursteg:" CssClass="labelStyle"></asp:Label>
+        <asp:TextBox ID="IntervalTemp" runat="server" CssClass="textbox"></asp:TextBox>
 
+        <asp:Label ID="Label4" runat="server" Text="Typ av konvertering" CssClass="labelStyle"></asp:Label>
+        <asp:RadioButton ID="CtoF" runat="server" Text="Celsius till Fahrenheit" CssClass="radio" Font-Size="10" Font-Bold="True" Font-Italic="True" GroupName="Radio" />
+        <asp:RadioButton ID="FtoC" runat="server" Text="Fahrenheit till Celsius" CssClass="radio" Font-Size="10" Font-Bold="True" Font-Italic="True" GroupName="Radio" />
 
-        <asp:RadioButton ID="RadioButton1" runat="server" Text="asd" />
-        <asp:RadioButton ID="RadioButton2" runat="server" />
-
+        <asp:Button ID="Convert" runat="server" Text="Konvertera" CssClass="button" />
 
     </div>
     </form>
