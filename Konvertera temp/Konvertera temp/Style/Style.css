@@ -1,21 +1,26 @@
 ﻿body {
 }
+.main{
+    margin: 0 auto;
+    width: 400px;
+}
 .labelStyle{
     margin: 0;
     padding: 0;
     float: left;
     clear: both;
+
 }
 .textbox{
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
     float: left;
-    clear: both;
+    clear: left;
 }
 .radio{
     float: left;
-    clear: both;
+    clear: left;
 }
 .button{
     margin-top: 20px;
