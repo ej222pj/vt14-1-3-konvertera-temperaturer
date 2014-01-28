@@ -37,12 +37,17 @@
         
             <%-- Typ av konvert --%>
             <div><asp:Label ID="Label4" runat="server" Text="Typ av konvertering" CssClass="labelStyle"></asp:Label></div>       
-            <asp:RadioButton ID="CtoF" runat="server" Text="Celsius till Fahrenheit" CssClass="radio" Font-Size="10" Font-Bold="True" Font-Italic="True" GroupName="Radio" Checked="True" />
-            <asp:RadioButton ID="FtoC" runat="server" Text="Fahrenheit till Celsius" CssClass="radio" Font-Size="10" Font-Bold="True" Font-Italic="True" GroupName="Radio" />
-             
-           
+            <div><asp:RadioButton ID="CtoF" runat="server" Text="Celsius till Fahrenheit" CssClass="radio" GroupName="Radio" Checked="True" /></div>
+            <div><asp:RadioButton ID="FtoC" runat="server" Text="Fahrenheit till Celsius" CssClass="radio" GroupName="Radio" /></div>
+
+            <div>
             <asp:Button ID="Convert" runat="server" Text="Konvertera" CssClass="button" OnClick="Convert_Click" />
+            </div>
         
+        <div>
+            <asp:Label ID="Result" runat="server" Text="" Visible="false"></asp:Label>
+        </div>
+
     </div>
     </form>
 </body>

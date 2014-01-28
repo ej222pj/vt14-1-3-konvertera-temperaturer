@@ -7,8 +7,6 @@
 .labelStyle{
     margin: 0;
     padding: 0;
-    
-
 }
 .textbox{
     margin: 0;
@@ -17,13 +15,11 @@
     
 }
 .radio{
-    float: left;
-    clear: left;
+    Font-Size: 10pt;
+    Font: bold italic;  
 }
 .button{
     margin-top: 20px;
-    float: left;
-    clear: both;
 }
 .error {
      Font-style: Italic;

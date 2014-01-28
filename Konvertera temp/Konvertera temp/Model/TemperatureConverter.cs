@@ -9,11 +9,13 @@ namespace Konvertera_temp.Model
     {
         public static int CelsiusToFahrenheit(int degreesC) {
             //[°F]=[°C]∙1,8+32
-            return 5;
+            int degrees = Convert.ToInt32(degreesC * 1.8 + 32);
+            return degrees;
         }
         public static int FahrenheitToCelsius(int degreesF){
             //[°C]=([°F]−32)∙5/9
-            return 5;
+            int degrees = Convert.ToInt32((degreesF-32) * 5 / 9);
+            return degrees;
         }
     }
 }
