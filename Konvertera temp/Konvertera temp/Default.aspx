@@ -38,9 +38,9 @@
             <div><asp:RadioButton ID="CtoF" runat="server" Text="Celsius till Fahrenheit" CssClass="radio" GroupName="Radio" Checked="True" /></div>
             <div><asp:RadioButton ID="FtoC" runat="server" Text="Fahrenheit till Celsius" CssClass="radio" GroupName="Radio" /></div>
 
-            <div>
+            
             <asp:Button ID="Convert" runat="server" Text="Konvertera" CssClass="button" OnClick="Convert_Click" />
-            </div>
+            
         
         
             <asp:Table ID="Table1" runat="server" CssClass="table" Visible="false"></asp:Table>
