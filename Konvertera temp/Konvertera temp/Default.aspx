@@ -11,34 +11,34 @@
     <form id="form1" runat="server">
     <div class="main">
         <h1>Konvertera temperaturer</h1>
+        <%-- Felmeddelande --%>
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Italic="True" Font-Size="10pt" ForeColor="Red" />
-             
+             <%-- Start --%>
             <div><asp:Label ID="Label1" runat="server" Text="Starttemperatur:" CssClass="labelStyle"></asp:Label></div>
             <asp:TextBox ID="StartTemp" runat="server" CssClass="textbox"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Fyll i en Starttemperatur" ControlToValidate="StartTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" Text="*">*</asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Starttemperaturen måste vara ett heltal" Type="Integer" Operator="DataTypeCheck" ControlToValidate="StartTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" Text="*"></asp:CompareValidator>
-                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Starttemperaturen måste vara ett tal mellan 1-100" MaximumValue="100" MinimumValue="1" ControlToValidate="StartTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" ClientIDMode="AutoID" Type="Integer" Text="*"></asp:RangeValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Fyll i en Starttemperatur" ControlToValidate="StartTemp" Display="Dynamic" CssClass="error" Text="*">*</asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Starttemperaturen måste vara ett heltal" Type="Integer" Operator="DataTypeCheck" ControlToValidate="StartTemp" Display="Dynamic" Text="*" CssClass="error"></asp:CompareValidator>
+                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Starttemperaturen måste vara ett tal mellan 1-100" MaximumValue="100" MinimumValue="1" ControlToValidate="StartTemp" Display="Dynamic"  CssClass="error" Type="Integer" Text="*"></asp:RangeValidator>
         
-
+            <%-- END --%>
             <div><asp:Label ID="Label2" runat="server" Text="Sluttemperatur:" CssClass="labelStyle"></asp:Label></div>
             <asp:TextBox ID="EndTemp" runat="server" CssClass="textbox"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Fyll i en Sluttemperatur" ControlToValidate="EndTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" Text="*"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Sluttemperaturen måste vara ett heltal" Type="Integer" Operator="DataTypeCheck" ControlToValidate="EndTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" Text="*"></asp:CompareValidator>
-                <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="Sluttemperaturen måste vara ett tal mellan 1-100" MaximumValue="100" MinimumValue="1" ControlToValidate="EndTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" ClientIDMode="AutoID" Type="Integer" Text="*"></asp:RangeValidator>
-        
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Fyll i en Sluttemperatur" ControlToValidate="EndTemp" Display="Dynamic" CssClass="error" Text="*"></asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Sluttemperaturen måste vara ett heltal" Type="Integer" Operator="DataTypeCheck" ControlToValidate="EndTemp"  CssClass="error" Text="*" Display="Dynamic"></asp:CompareValidator>
+                <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="Sluttemperaturen måste vara ett tal mellan 1-100" MaximumValue="100" MinimumValue="1" ControlToValidate="EndTemp"  CssClass="error" Type="Integer" Text="*" Display="Dynamic"></asp:RangeValidator>
+                <asp:CompareValidator ID="CompareValidator4" runat="server" ErrorMessage="Sluttemperaturen måste vara högre än starttemperaturen" Type="Integer" Operator="GreaterThan" ControlToValidate="EndTemp" ControlToCompare="StartTemp" CssClass="error" Text="*" Display="Dynamic"></asp:CompareValidator>
 
+            <%-- Intervall --%>
             <div><asp:Label ID="Label3" runat="server" Text="Temperatursteg:" CssClass="labelStyle"></asp:Label></div>
             <asp:TextBox ID="IntervalTemp" runat="server" CssClass="textbox"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Fyll i ett temperatursteg" ControlToValidate="IntervalTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" Text="*"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="CompareValidator3" runat="server" ErrorMessage="Temperatursteget måste vara ett heltal" Type="Integer" Operator="DataTypeCheck" ControlToValidate="IntervalTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" Text="*"></asp:CompareValidator>
-                <asp:RangeValidator ID="RangeValidator3" runat="server" ErrorMessage="Temperatursteget måste vara ett tal mellan 1-20" MaximumValue="20" MinimumValue="1" ControlToValidate="IntervalTemp" Display="Dynamic" Font-Italic="True" Font-Size="10pt" ForeColor="Red" ClientIDMode="AutoID" Type="Integer" Text="*"></asp:RangeValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Fyll i ett temperatursteg" ControlToValidate="IntervalTemp"  CssClass="error" ForeColor="Red" Text="*" Display="Dynamic"></asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="CompareValidator3" runat="server" ErrorMessage="Temperatursteget måste vara ett heltal" Type="Integer" Operator="DataTypeCheck" ControlToValidate="IntervalTemp" Display="Dynamic"  CssClass="error" Text="*"></asp:CompareValidator>
+                <asp:RangeValidator ID="RangeValidator3" runat="server" ErrorMessage="Temperatursteget måste vara ett tal mellan 1-20" MaximumValue="20" MinimumValue="1" ControlToValidate="IntervalTemp" Display="Dynamic"  CssClass="error" ClientIDMode="AutoID" Type="Integer" Text="*"></asp:RangeValidator>
         
-        
-            <div><asp:Label ID="Label4" runat="server" Text="Typ av konvertering" CssClass="labelStyle"></asp:Label></div>
-            
-            <asp:RadioButton ID="CtoF" runat="server" Text="Celsius till Fahrenheit" CssClass="radio" Font-Size="10" Font-Bold="True" Font-Italic="True" GroupName="Radio" />
+            <%-- Typ av konvert --%>
+            <div><asp:Label ID="Label4" runat="server" Text="Typ av konvertering" CssClass="labelStyle"></asp:Label></div>       
+            <asp:RadioButton ID="CtoF" runat="server" Text="Celsius till Fahrenheit" CssClass="radio" Font-Size="10" Font-Bold="True" Font-Italic="True" GroupName="Radio" Checked="True" />
             <asp:RadioButton ID="FtoC" runat="server" Text="Fahrenheit till Celsius" CssClass="radio" Font-Size="10" Font-Bold="True" Font-Italic="True" GroupName="Radio" />
-       
              
            
             <asp:Button ID="Convert" runat="server" Text="Konvertera" CssClass="button" OnClick="Convert_Click" />

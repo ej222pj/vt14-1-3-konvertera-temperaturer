@@ -18,7 +18,7 @@ namespace Konvertera_temp
         {
             if (IsValid) 
             {
-            
+                
             }
         }
     }

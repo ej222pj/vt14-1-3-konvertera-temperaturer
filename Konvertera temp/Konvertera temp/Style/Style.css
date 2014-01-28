@@ -25,3 +25,8 @@
     float: left;
     clear: both;
 }
+.error {
+     Font-style: Italic;
+     Font-Size: 10pt; 
+     Color: Red;
+}
