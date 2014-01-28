@@ -33,7 +33,6 @@ namespace Konvertera_temp
                     headerTableCell1.Text = "°C";
                     headerTableCell2.Text = "°F";
 
-
                     headerRow.Cells.Add(headerTableCell1);
                     headerRow.Cells.Add(headerTableCell2);
 
