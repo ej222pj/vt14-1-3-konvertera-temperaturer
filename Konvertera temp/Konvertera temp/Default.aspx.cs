@@ -27,25 +27,66 @@ namespace Konvertera_temp
                 
                 if (cToF.Checked)
                 {
-                    for (int i = startTemp; i > endTemp; i += interval)
+                    TableHeaderRow headerRow = new TableHeaderRow();
+                    TableHeaderCell headerTableCell1 = new TableHeaderCell();
+                    TableHeaderCell headerTableCell2 = new TableHeaderCell();
+                    headerTableCell1.Text = "°C";
+                    headerTableCell2.Text = "°F";
+
+
+                    headerRow.Cells.Add(headerTableCell1);
+                    headerRow.Cells.Add(headerTableCell2);
+
+                    Table1.Rows.Add(headerRow);
+
+                    for (int i = startTemp; i <= endTemp; i += interval)
                     {
                         TableRow tRow = new TableRow();
                         Table1.Rows.Add(tRow);
-                        for (int cell = 0; cell < 2; cell++)
-                        {
-                            // Create a new cell and add it to the row.
-                            TableCell tCell = new TableCell();
-                            tCell.Text = TemperatureConverter.CelsiusToFahrenheit(i).ToString();
-                            tRow.Cells.Add(tCell);
-                        }
+
+                        // Create a new cell and add it to the row.
+                        TableCell tCell1 = new TableCell();
+                        tCell1.Text = i.ToString();
+                        tRow.Cells.Add(tCell1);
+
+                        TableCell tCell2 = new TableCell();
+                        tCell2.Text = TemperatureConverter.CelsiusToFahrenheit(i).ToString();
+                        tRow.Cells.Add(tCell2);
+
                     }
                     Table1.Visible = true;
                     
                 }
                 else if (fToC.Checked)
                 {
-                    //Result.Text = TemperatureConverter.FahrenheitToCelsius(startTemp).ToString();
-                   // Result.Visible = true;
+                    TableHeaderRow headerRow = new TableHeaderRow();
+                    TableHeaderCell headerTableCell1 = new TableHeaderCell();
+                    TableHeaderCell headerTableCell2 = new TableHeaderCell();
+                    headerTableCell1.Text = "°F";
+                    headerTableCell2.Text = "°C";
+
+
+                    headerRow.Cells.Add(headerTableCell1);
+                    headerRow.Cells.Add(headerTableCell2);
+
+                    Table1.Rows.Add(headerRow);
+
+                    for (int i = startTemp; i <= endTemp; i += interval)
+                    {
+                        TableRow tRow = new TableRow();
+                        Table1.Rows.Add(tRow);
+
+                        // Create a new cell and add it to the row.
+                        TableCell tCell1 = new TableCell();
+                        tCell1.Text = i.ToString();
+                        tRow.Cells.Add(tCell1);
+
+                        TableCell tCell2 = new TableCell();
+                        tCell2.Text = TemperatureConverter.FahrenheitToCelsius(i).ToString();
+                        tRow.Cells.Add(tCell2);
+
+                    }
+                    Table1.Visible = true;
                 }
             }
         }

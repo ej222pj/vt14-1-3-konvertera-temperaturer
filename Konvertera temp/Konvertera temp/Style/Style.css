@@ -26,3 +26,23 @@
      Font-Size: 10pt; 
      Color: Red;
 }
+
+table
+{
+    border-collapse:collapse;
+    border: 1px solid black;
+}
+table
+{
+    width: 100px;
+    height: auto;
+}
+th {
+    background-color: #8491ad;
+    border: 1px solid black;
+}
+td {
+    background-color: #a3a3a3;
+    border-bottom: 1px solid #c3c3c3;
+    border-left: 1px solid #c3c3c3;
+}
