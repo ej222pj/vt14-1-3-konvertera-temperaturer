@@ -45,7 +45,7 @@
             </div>
         
         <div>
-            <asp:Label ID="Result" runat="server" Text="" Visible="false"></asp:Label>
+            <asp:Table ID="Table1" runat="server"></asp:Table>
         </div>
 
     </div>

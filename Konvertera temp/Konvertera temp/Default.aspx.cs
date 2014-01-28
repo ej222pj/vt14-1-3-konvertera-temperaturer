@@ -24,16 +24,28 @@ namespace Konvertera_temp
                 var interval = int.Parse(IntervalTemp.Text);
                 var cToF = CtoF;
                 var fToC = FtoC;
-
+                
                 if (cToF.Checked)
                 {
-                    Result.Text = TemperatureConverter.CelsiusToFahrenheit(startTemp).ToString();
-                    Result.Visible = true;
+                    for (int i = startTemp; i > endTemp; i += interval)
+                    {
+                        TableRow tRow = new TableRow();
+                        Table1.Rows.Add(tRow);
+                        for (int cell = 0; cell < 2; cell++)
+                        {
+                            // Create a new cell and add it to the row.
+                            TableCell tCell = new TableCell();
+                            tCell.Text = TemperatureConverter.CelsiusToFahrenheit(i).ToString();
+                            tRow.Cells.Add(tCell);
+                        }
+                    }
+                    Table1.Visible = true;
+                    
                 }
                 else if (fToC.Checked)
                 {
-                    Result.Text = TemperatureConverter.FahrenheitToCelsius(startTemp).ToString();
-                    Result.Visible = true;
+                    //Result.Text = TemperatureConverter.FahrenheitToCelsius(startTemp).ToString();
+                   // Result.Visible = true;
                 }
             }
         }
